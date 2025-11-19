@@ -43,7 +43,7 @@ Homepage → About Us → resources → donations → Contact - gallery
 
 Updated Changelog (Add this under CHANGELOG in your README.md)
 
-Here is what changed from your original website to the new modern version:
+Here is what changed from  original website to the new modern version:
 
 # [19 Nov 2025] Added Full Modern UI Redesign (Theme 2 – Dark Mode)
 
