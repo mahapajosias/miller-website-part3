@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — Miller High School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg viewBox="0 0 50 50" class="loader-ring" aria-hidden="true">
+        <circle cx="25" cy="25" r="20"></circle>
+      </svg>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="images/Miller High School Logo.png" alt="logo"><span class="brand-text">MILLER HIGH SCHOOL</span></a>
+      <button id="navToggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a class="active" href="gallery.html">Gallery</a></li>
+          <li><a href="donations.html">Donations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <section class="section-animate">
+      <h1>School Gallery</h1>
+      <p>Moments from school life — events, sports and celebrations.</p>
+    </section>
+
+    <section class="gallery-grid section-animate">
+      <img class="gallery-img" src="images/term.jpg" alt="Event 1" onclick="openPopup(this.src)">
+      <img class="gallery-img" src="images/pic2.jpg" alt="Event 2" onclick="openPopup(this.src)">
+      <img class="gallery-img" src="images/pen (2).jpg" alt="Event 3" onclick="openPopup(this.src)">
+      <img class="gallery-img" src="images/Sports.jpg" alt="Event 4" onclick="openPopup(this.src)">
+    </section>
+
+
+    <div id="popup" class="popup" onclick="closePopup(event)">
+      <img id="popup-img" src="" alt="popup image">
+    </div>
+
+    <div class="countdown section-animate">
+      <strong id="days">0</strong> until Matric Final Exams (2025)
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>&copy; 2025 Miller High School</div>
+      <div class="social">
+        <a class="social-icon" href="#" aria-label="Facebook">f</a>
+        <a class="social-icon" href="#" aria-label="Instagram">i</a>
+        <a class="social-icon" href="#" aria-label="Twitter">t</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Donations — Miller High School</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="loader-inner">
+      <svg viewBox="0 0 50 50" class="loader-ring" aria-hidden="true">
+        <circle cx="25" cy="25" r="20"></circle>
+      </svg>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><img class="brand-logo" src="images/Miller High School Logo.png" alt="logo"><span class="brand-text">MILLER HIGH SCHOOL</span></a>
+      <button id="navToggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+      <nav id="mainNav" class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a class="active" href="donations.html">Donations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <section class="section-animate">
+      <h1>Support Miller High School</h1>
+      <p>All donations help improve classrooms, buy learning materials and support learners in need.</p>
+    </section>
+
+    <section class="section-animate">
+      <div class="cards">
+        <div class="card">
+          <h3>Bank Transfer</h3>
+          <p>Standard Bank — Account: 123456789 — Branch Code: 051001</p>
+        </div>
+        <div class="card">
+          <h3>Mobile Money</h3>
+          <p>Send via mobile money to: +27 123 456 789</p>
+        </div>
+        <div class="card">
+          <h3>Drop Off</h3>
+          <p>Bring supplies to the school office — Monday to Friday.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-animate">
+      <h2>Make an Online Donation (UI only)</h2>
+      <form id="donationForm" class="contact-form">
+        <input id="donorName" type="text" placeholder="Full name" required>
+        <input id="donorEmail" type="email" placeholder="Email address" required>
+        <input id="donationAmount" type="number" placeholder="Amount (R)" required>
+        <textarea id="donorMessage" placeholder="Message (optional)" rows="3"></textarea>
+        <button class="btn btn-primary" type="submit">Submit Donation</button>
+        <p id="donationMsg" class="form-msg" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="section-animate map-box">
+      <iframe
+        src="https://maps.google.com/maps?q=Miller%20High%20School%2C%20Seshego&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <div class="countdown section-animate">
+      <strong id="days">0</strong> until Matric Final Exams (2025)
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>&copy; 2025 Miller High School</div>
+      <div class="social">
+        <a class="social-icon" href="#" aria-label="Facebook">f</a>
+        <a class="social-icon" href="#" aria-label="Instagram">i</a>
+        <a class="social-icon" href="#" aria-label="Twitter">t</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+
+  <script>
+    const donationForm = document.getElementById('donationForm');
+    if (donationForm) {
+      donationForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        const name = document.getElementById('donorName').value.trim();
+        const email = document.getElementById('donorEmail').value.trim();
+        const amount = document.getElementById('donationAmount').value.trim();
+        const msgEl = document.getElementById('donationMsg');
+        if (!name || !email || !amount) {
+          msgEl.textContent = 'Please complete name, email and amount.';
+          msgEl.style.color = '#ff6b6b';
+          return;
+        }
+        msgEl.textContent = 'Thanks — your donation intent was recorded (no payment gateway attached).';
+        msgEl.style.color = '#ffd700';
+        donationForm.reset();
+      });
+    }
+  </script>
+</body>
+</html>
