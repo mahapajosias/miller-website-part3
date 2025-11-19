@@ -163,6 +163,5 @@ Added new scroll-based animation engine
 - Unsplash (n.d.). Free Stock Images. Available at: https://unsplash.com/ [Accessed: 19 november 2025]
 
 ## PROJECT LINKS
-
-
-- https://cozy-malabi-233e00.netlify.app/
+https://github.com/mahapajosias/miller-website-part3.git
+https://earnest-sopapillas-fb6172.netlify.app/contact
